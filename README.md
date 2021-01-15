@@ -2,7 +2,7 @@
 
 Data augmentation is a very useful and widely used method in data science (see: https://en.wikipedia.org/wiki/Data_augmentation). Especially, it can increase the sample size of the training set for machine learning models.
 
-Rarefaction can be used as an effective and trustable method for data augmentation, given the following reasons:
+Rarefaction can be used as an effective and reliable method for data augmentation, given the following reasons:
 * Essentially, biological sample collection and sequencing are random sampling processes, which capture microbes from an unknown population. Rarefaction is just another random sampling process, 
 which can also be seen as sampling certain reads from the same population, just the same as biological sample collection and sequencing.
 * Under the hypothesis that "rarefaction" = "biological sample collection and sequencing", each iteration of rarefaction on a sequencing sample in fact generates a new sequencing sub-sample. 
@@ -33,7 +33,7 @@ qiime data-augment augment --i-table raw_table.qza
                            --o-augmented-table augmented_table.qza 
 ```                      
 "raw_table.qza" and "raw_metadata.tsv" are the input raw feature table and metadata; --p-sampling-depth --> the rarefaction depth; --p-augment-times set to 10 means repeating 
-rarefaction 10 times (i.e., enlarge sample 10 times); "augmented_table.qza" is the augmented feature table, its sample size is 10 times larger than "raw_table.qza", and new rarefed samples end with "*_X*" (X represents the *i*_th rarefaction); "augmented_meta.tsv" is the augmented metadata that has matching sample names in "augmented_table.qza".
+rarefaction 10 times (i.e., enlarge sample 10 times); "augmented_table.qza" is the augmented feature table, its sample size is 10 times larger than "raw_table.qza", and new rarefied samples end with "*_X*" (X represents the *i*_th rarefaction); "augmented_meta.tsv" is the augmented metadata that has matching sample names in "augmented_table.qza".
 
 Note: Only need to augment the training set.
 
