@@ -16,7 +16,7 @@ from q2_types.feature_table import (FeatureTable, Frequency)
 citations = Citations.load('citations.bib', package='q2_data_augment')
 
 plugin = Plugin(
-    name='q2-data-augment',
+    name='data-augment',
     version='1.0',
     website='https://github.com/yxia0125/q2_data_augment',
     package='q2_data_augment',
